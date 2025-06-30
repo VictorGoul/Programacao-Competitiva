@@ -8,7 +8,7 @@ public class bee1047 {
         Scanner scan = new Scanner(System.in);
         String imput = scan.nextLine();
         scan.close();
-        String [] numeros = imput.split(" ");
+        String[] numeros = imput.split(" ");
         int[] arrayNumero = new int[numeros.length];
         for (int i = 0; i < numeros.length; i++) {
             arrayNumero[i] = Integer.parseInt(numeros[i].trim());

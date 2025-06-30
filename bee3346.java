@@ -5,13 +5,15 @@ import java.util.*;
 
 public class bee3346 {
     public static void main(String[] args) throws IOException {
+        // Colocado o local para os EUA para ser aceito o output com "." ao inves de "," na variavel de saida
+        Locale.setDefault(Locale.US); 
         Scanner scan = new Scanner(System.in);
         String porcentagem = scan.nextLine();
         scan.close();
         String [] numeros = porcentagem.split(" ");
-        float[] arrayNumero = new float[numeros.length];
+        double[] arrayNumero = new double[numeros.length];
         for (int i = 0; i < numeros.length; i++) {
-            arrayNumero[i] = Float.parseFloat(numeros[i].trim());
+            arrayNumero[i] = Double.parseDouble(numeros[i].trim());
         }
         double total = (1 + arrayNumero[0] / 100.0) * (1 + arrayNumero[1] / 100.0);
         double flutuacao = (total - 1) * 100;
